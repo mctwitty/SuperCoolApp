@@ -1,12 +1,16 @@
-'use strict';
+(function(angular) {'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('SuperCoolApp', [
-  'ngRoute',
-  'SuperCoolApp.view1',
-  'SuperCoolApp.view2',
-  'SuperCoolApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/'});
-}]);
+	var app = angular.module('SuperCoolApp', ['ngRoute']);
+	  // 'SuperCoolApp.view1'
+	  // ,'myApp.version'
+	app.config(['$routeProvider', function($routeProvider) {
+	  $routeProvider.otherwise({redirectTo: '/app'});
+	}]);
+	app.directive('feature', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'templates/feature_layout.html'
+		};
+	});
+})(window.angular);
