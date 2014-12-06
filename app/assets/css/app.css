@@ -32,3 +32,15 @@ body {
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+.upvote {
+  font-weight: bold;
+  font-size: 150%;
+  color: #428BCA;
+  padding-right: 5px;
+}
+.downvote {
+  font-weight: bold;
+  font-size: 150%;
+  color: #D2322D;
+  padding-right: 5px;
+}

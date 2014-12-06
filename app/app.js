@@ -10,7 +10,13 @@
 	app.directive('feature', function(){
 		return {
 			restrict: 'E',
-			templateUrl: 'templates/feature_layout.html'
+			templateUrl: 'templates/feature.html',
+			// controller: 'FeatureController',
+			// controllerAs: 'feature',
+			scope: {
+				feature: '=info'
+			}
 		};
 	});
+
 })(window.angular);
